@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency Converter</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <main>
@@ -11,7 +12,7 @@
 
       <label>
         <span>Amount:</span>
-        <input type="number" placeholder="Enter the amount" />
+        <input id="amount" type="number" placeholder="Enter the amount" />
       </label>
 
       <label>
@@ -35,6 +36,13 @@
           <option value="LLL">LLL</option>
         </select>
       </label>
+
+      <button id="convert">Convert</button>
+
+      <div class="result">
+        <p>Conversion Result: <span id="result">NGN 1000000</span></p>
+      </div>
     </main>
   </body>
+  <script src="./script.js"></script>
 </html>
