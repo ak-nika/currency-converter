@@ -7,6 +7,8 @@ const convertBtn = document.getElementById("convert");
 const amount = document.getElementById("amount");
 const result = document.getElementById("result");
 const resultContainer = document.querySelector(".result");
+const mainContainer = document.querySelector("main");
+const loader = document.querySelector("#loader");
 
 let rates = {};
 
@@ -26,6 +28,9 @@ const getCurrency = async () => {
         select.appendChild(option);
       });
     });
+
+    loader.style.display = "none";
+    mainContainer.style.display = "flex";
   } catch (error) {
     console.error("Error fetching data:", error);
   }
