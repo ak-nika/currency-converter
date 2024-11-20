@@ -38,6 +38,10 @@ const getCurrency = async () => {
 
 getCurrency();
 
+const formatNumber = (num) => {
+  return new Intl.NumberFormat().format(num);
+};
+
 convertBtn.addEventListener("click", () => {
   const fromValue = from.value;
   const toValue = to.value;
@@ -58,7 +62,8 @@ convertBtn.addEventListener("click", () => {
 
   const conversionRate = rates[toValue] / rates[fromValue];
   const conversion = conversionRate * Number(amount.value);
+  const formattedNumber = formatNumber(conversion);
 
-  result.textContent = `${toValue} ${conversion.toFixed(2)}`;
+  result.textContent = `${toValue} ${formattedNumber}`;
   resultContainer.classList.add("success");
 });
