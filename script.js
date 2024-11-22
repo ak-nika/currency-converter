@@ -1,5 +1,5 @@
-const apiKey = "50b7961799c9b6bf96be639640062961";
-const baseUrl = "https://api.exchangeratesapi.io/v1/";
+let apiKey;
+let baseUrl;
 const selects = document.querySelectorAll("select");
 const from = document.getElementById("from");
 const to = document.getElementById("to");

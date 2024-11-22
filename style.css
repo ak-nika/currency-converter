@@ -24,10 +24,6 @@ body {
   border-top: 0;
   border-bottom: 0;
   animation: spin 1s linear infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #002366;
 }
 #loader p {
   position: absolute;
@@ -71,7 +67,7 @@ input {
   border-radius: 8px;
   padding: 10px;
   width: 100%;
-  transform: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 input:focus {
   border-color: #007bff;
@@ -85,7 +81,7 @@ select {
   border-radius: 8px;
   padding: 10px;
   width: 100%;
-  transform: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 select:focus {
   border-color: #007bff;
